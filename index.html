@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--from fontawesome-->
+   <script src="https://kit.fontawesome.com/1585dc4e54.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>homepage</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class= "nav-branding" ><span class="red">Beacon</span><span class="gold">Sur</span><span class="green">vey</span></a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="homepage.html" class="nav-link">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Beacon Status</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    
+</body>
+<script src="index.js"></script>
+
+
+<main>
+    <div class="flex-container">
+        <div class="item1">map</div>
+
+        <div class="item2">
+       <!--<div class="section search">   
+            <input type="text" id="filterInput" class="text-input" placeholder="search regions..">  
+        </div>--> 
+
+        <input type="text" id="filterInput" class="text-input" placeholder="search regions..">
+
+        <ul id ="names" class="collection with-header">
+           
+            <li class="names-regions">
+                <h3><a href="#">LiSAG CORS</a></h3>
+            </li>
+
+            <li class="names-regions">
+                <h3><a href="#">CENTRAL</a></h3>
+            </li>
+
+            <li class="names-regions">
+                <h3><a href="#">GREATER ACCRA</a></h3>
+            </li>
+
+            <li class="names-regions">
+                <h3><a href="#">WESTERN</a></h3>
+            </li>
+
+            <li class="names-regions">
+                <h3><a href="#">WESTERN NORTH</a></h3>
+            </li>
+
+            <li class="names-regions">
+                <h3><a href="#">EASTERN</a></h3>
+            </li>
+
+            <li class="names-regions">
+                <h3><a href="#">ASHANTI</a></h3>
+            </li>
+
+            <li class="names-regions">
+                <h3><a href="#">VOLTA</a></h3>
+            </li>
+
+            <li class="names-regions">
+                <h3><a href="#">OTI</a></h3>
+            </li>
+
+            <li class="names-regions">
+                <h3><a href="#">AHAFO</a></h3>
+            </li>
+
+            <li class="names-regions">
+                <h3><a href="#">BONO</a></h3>
+            </li>
+
+            <li class="names-regions">
+                <h3><a href="#">BONO EAST</a></h3>
+            </li>
+
+            <li class="names-regions">
+                <h3><a href="#">NORTHERN</a></h3>
+            </li>
+
+            <li class="names-regions">
+                <h3><a href="#">SAVANNAH</a></h3>
+            </li>
+
+            <li class="names-regions">
+                <h3><a href="#">NORTH EAST</a></h3>
+            </li>
+
+            <li class="names-regions">
+                <h3><a href="#">UPPER EAST</a></h3>
+            </li>
+
+            <li class="names-regions">
+                <h3><a href="#">UPPER WEST</a></h3>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        let filterInput = document.getElementById('filterInput');
+           filterInput.addEventListener('keyup', filterNames);
+
+            function filterNames(){
+            
+            let filterValue = document.getElementById('filterInput').value.toUpperCase();
+            
+            let ul = document.getElementById('names');
+            let li = ul.querySelectorAll('li.names-regions');
+            //loop through the names-regions list
+            for(let i = 0;i <li.length;i++){
+                let a = li[i].getElementsByTagName('a')[0];
+                //if matched
+            if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+                li[i].style.display = '';}
+                else{
+                    li[i].style.display = 'none';
+                }
+            }
+            }
+
+    </script> 
+</main>
+
+<footer>
+    <div class="footer">
+        <h2>
+            <span class="red">Beacon</span><span class="gold">Sur</span><span class="green">vey</span> <i>copyright &copy; <script>document.write(new Date().getFullYear())</script></i>
+        </h2> 
+    </div>
+    
+</footer>
+</html>
+
